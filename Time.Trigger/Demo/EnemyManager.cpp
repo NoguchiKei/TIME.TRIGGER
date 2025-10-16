@@ -20,7 +20,7 @@ bool EnemyManager::Init()
         e->Init();
         enemies.push_back(e);
     }
-    {
+  /*  {
         Enemy* e = NewGO<Enemy>(0, "enemy2");
         e->SetInitPos({ 100.0f, -100.0f, -1000.0f });
         e->Init();
@@ -31,7 +31,7 @@ bool EnemyManager::Init()
         e->SetInitPos({ -100.0f, -100.0f, -1000.0f });
         e->Init();
         enemies.push_back(e);
-    }
+    }*/
 
     return true;
 }
