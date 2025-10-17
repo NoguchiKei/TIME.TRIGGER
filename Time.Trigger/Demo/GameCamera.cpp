@@ -8,8 +8,8 @@ GameCamera::~GameCamera() = default;
 bool GameCamera::Init()
 {
     // 初期カメラオフセット（注視点からカメラまでの距離）
-    m_toCameraPos = Vector3(0.0f, 150.0f, 10.0f);
-
+    m_toCameraPos = Vector3(0.0f, -150.0f, -10.0f);
+    
     // プレイヤーオブジェクトを検索
     m_player = FindGO<Player>("player");
 
