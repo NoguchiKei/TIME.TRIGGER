@@ -16,7 +16,7 @@ bool EnemyManager::Init()
     // —á: 3‘Ì‚Ì“G‚ğo‚·
     {
         Enemy* e = NewGO<Enemy>(0, "enemy1");
-        e->SetInitPos({ 0.0f, -100.0f, -1000.0f });
+        e->SetInitPos({ 0.0f, -50.0f, 2200.0f });
         e->Init();
         enemies.push_back(e);
     }

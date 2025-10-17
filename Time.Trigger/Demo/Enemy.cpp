@@ -8,7 +8,7 @@ Enemy::~Enemy() {}
 void Enemy::SetInitPos(const Vector3& pos)
 {
     m_initPos = pos;
-    m_position = pos; // ここで m_position にもコピー
+    m_position = pos; 
 }
 
 bool Enemy::Init()
@@ -36,49 +36,49 @@ void Enemy::Update()
 
 void Enemy::Move()
 {
-    if (m_player == nullptr) return;
+    //if (m_player == nullptr) return;
 
-    bool isEnd;
-    Vector3 toPlayer = m_player->m_position - m_position;
-    float distToPlayer = toPlayer.Length();
+    //bool isEnd;
+    //Vector3 toPlayer = m_player->m_position - m_position;
+    //float distToPlayer = toPlayer.Length();
 
-    // プレイヤーとの距離で状態を分岐
-    const float attackRange = 800.0f;   // 攻撃に切り替える距離
-    const float chaseRange = 3000.0f;  // 追跡開始距離
+    //// プレイヤーとの距離で状態を分岐
+    //const float attackRange = 80.0f;   // 攻撃に切り替える距離
+    //const float chaseRange = 3000.0f;  // 追跡開始距離
 
-    if (distToPlayer < chaseRange) {
-        if (distToPlayer > attackRange) {
-            // ========== 追跡モード ==========
-            m_pathFiding.Execute(
-                m_path,
-                m_nvmMesh,
-                m_position,
-                m_player->m_position,
-                PhysicsWorld::GetInstance(),
-                50.0f,
-                200.0f
+    //if (distToPlayer < chaseRange) {
+    //    if (distToPlayer > attackRange) {
+    //        // ========== 追跡モード ==========
+    //        m_pathFiding.Execute(
+    //            m_path,
+    //            m_nvmMesh,
+    //            m_position,
+    //            m_player->m_position,
+    //            PhysicsWorld::GetInstance(),
+    //            50.0f,
+    //            200.0f
 
-            );
+    //        );
 
 
-            // ナビメッシュ経路に沿って移動
-            m_position = m_path.Move(
-                m_position,
-                20.0f,   // 移動速度
-                isEnd
-            );
+    //        // ナビメッシュ経路に沿って移動
+    //        m_position = m_path.Move(
+    //            m_position,
+    //            20.0f,   // 移動速度
+    //            isEnd
+    //        );
 
-            // 前を向く
-            Vector3 toPlayerDir = toPlayer;
-            toPlayerDir.Normalize();
-            m_enemyForward = toPlayerDir;
-        }
-        else {
-            // ========== 攻撃モード ==========
-            // ここで銃撃処理（アニメーション再生や弾発射など）を書く
-            // 今回はまだ省略でOK
-        }
-    }
+    //        // 前を向く
+    //        Vector3 toPlayerDir = toPlayer;
+    //        toPlayerDir.Normalize();
+    //        m_enemyForward = toPlayerDir;
+    //    }
+    //    else {
+    //        // ========== 攻撃モード ==========
+    //        // ここで銃撃処理（アニメーション再生や弾発射など）を書く
+    //        // 今回はまだ省略でOK
+    //    }
+    //}
 
     // 回転と描画を更新
     m_rotation.SetRotationY(atan2(m_enemyForward.x, m_enemyForward.z));
