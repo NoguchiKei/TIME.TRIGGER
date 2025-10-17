@@ -9,6 +9,7 @@ bool Player::Init()
     // プレイヤーモデルの読み込み
     m_modelRender.Init("Assets/modelData/Player/Player2.tkm");
     //m_modelRender.SetScale(3.0f, 3.0f, 3.0f);
+	rotation.SetRotationY(180.0f); 
     m_position = { 0,100,0 };
     // キャラクターコントローラー（当たり判定）の初期化
     m_characterController.Init(25.0f, 75.0f, m_position);
