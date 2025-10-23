@@ -7,7 +7,8 @@ BackGround::~BackGround() = default;
 
 bool BackGround::Init()
 {
-    m_bg.Init("Assets/modelData/BackGround/Demo_Stage03_kansei.tkm");
+    m_bg.Init("Assets/modelData/BackGround/Stage01_kansei.tkm");
+    //m_bg.Init("Assets/modelData/BackGround/Demo_Stage02_demo.tkm"); //Stage2‚ðŒ©‚é—p
   
 
     //m_bg.SetPosition(Vector3(0.0f, 0.0f, 0.0f));
