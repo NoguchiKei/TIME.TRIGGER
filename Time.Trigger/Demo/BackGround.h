@@ -12,6 +12,7 @@ public:
 
 private:
     ModelRender m_bg;
+    ModelRender m_bg2;
 
     // “–‚½‚è”»’è
     PhysicsStaticObject m_bgObject;

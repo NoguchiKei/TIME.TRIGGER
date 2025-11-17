@@ -8,6 +8,7 @@ BackGround::~BackGround() = default;
 bool BackGround::Init()
 {
     m_bg.Init("Assets/modelData/BackGround/Stage01_kansei.tkm");
+    //m_bg2.Init("Assets/modelData/BackGround/otamesi.tkm");
     //m_bg.Init("Assets/modelData/BackGround/Demo_Stage02_demo.tkm"); //Stage2‚ðŒ©‚é—p
   
 
@@ -33,4 +34,5 @@ void BackGround::Update()
 void BackGround::Render(RenderContext& renderContext)
 {
 	m_bg.Draw(renderContext);
+	//m_bg2.Draw(renderContext);
 }
