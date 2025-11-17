@@ -1,6 +1,14 @@
 #pragma once
 
 
+// 弾リスト
+struct Shot {
+    Vector3 pos;        // 現在位置
+    Vector3 startPos;   // 発射地点（寿命判定用）
+    Vector3 dir;        // 移動方向
+    bool active = false; // 使用中かどうか
+};
+
 class Player : public IGameObject
 {
 public:
@@ -16,6 +24,7 @@ public:
     bool ShotInit();
     void ShotUpdate();   // ショット更新
 
+    const std::vector<Shot>& GetShots() const { return m_shots; }
 
     CharacterController& GetCharacterController()
     {
@@ -49,13 +58,6 @@ private:
     Vector3 m_shotDir = Vector3::Zero; // ショット方向
     bool m_isShot = false;             // ショット状態
 
-    // 弾リスト
-    struct Shot {
-        Vector3 pos;        // 現在位置
-        Vector3 startPos;   // 発射地点（寿命判定用）
-        Vector3 dir;        // 移動方向
-        bool active = false; // 使用中かどうか
-    };
     std::vector<Shot> m_shots;
 
     // 発射間隔管理
