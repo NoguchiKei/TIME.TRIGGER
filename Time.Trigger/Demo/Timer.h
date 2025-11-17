@@ -1,5 +1,9 @@
 #pragma once
-class Timer
+class Timer : public IGameObject
 {
+	public:
+	Timer();
+	~Timer() override;
+
 };
 
