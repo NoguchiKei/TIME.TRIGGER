@@ -12,7 +12,7 @@ Game::~Game()
 	DeleteGO(m_backGround);
 	DeleteGO(m_player);
 	DeleteGO(m_gameCamera);
-	DeleteGO(m_enemy);
+	DeleteGO(m_enemyMgr);
 
 }
 
@@ -26,8 +26,9 @@ bool Game::Start()
 	m_player->ShotInit();
 
 	//敵のオブジェクトを作る。
-	m_enemy = NewGO<EnemyManager>(0, "enemy");
-	m_enemy->Init();
+	m_enemyMgr = NewGO<EnemyManager>(0, "enemy");
+	m_enemyMgr->Init();
+	m_enemyMgr->SetPlayer(m_player);
 
 
 	//背景のオブジェクトを作る。
@@ -43,7 +44,7 @@ bool Game::Start()
 
 void Game::Update()
 {
-
+	
 
 }
 
