@@ -20,6 +20,6 @@ private:
 	Player* m_player = nullptr;
 	BackGround* m_backGround = nullptr;
 	GameCamera* m_gameCamera = nullptr;
-	EnemyManager* m_enemy = nullptr;
+	EnemyManager* m_enemyMgr = nullptr;
 
 };
