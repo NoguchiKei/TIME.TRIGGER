@@ -18,6 +18,10 @@ public:
 
     void SetInitPos(const Vector3& pos);
 
+    bool IsDead() const { return !m_isAlive; }
+    const Vector3& GetPosition() const { return m_position; }
+
+
 
 private:
     void Move();
@@ -36,6 +40,9 @@ private:
     int m_enemyState = 0;   // 敵のステート
     Vector3 m_enemyForward = { 0.0f, 0.0f, -1.0f };	// 敵の前方ベクトル
     Quaternion m_rotation;  //クォータニオン。
+
+    float m_verticalSpeed = 0.0f;
+    Vector3 m_moveSpeed = { 0,0,0 };
 
     //ナビメッシュ
     nsAI::NaviMesh m_nvmMesh;
