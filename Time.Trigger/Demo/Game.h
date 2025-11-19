@@ -6,6 +6,7 @@ class Player;
 class BackGround;
 class GameCamera;
 class EnemyManager;
+class GameClear;
 
 class Game : public IGameObject
 {

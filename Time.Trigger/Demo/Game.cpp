@@ -4,6 +4,7 @@
 #include "Player.h"
 #include "GameCamera.h"
 #include "EnemyManager.h"
+#include "GameClear.h"
 
 Game::Game() {}
 
@@ -44,7 +45,12 @@ bool Game::Start()
 
 void Game::Update()
 {
-	
+	// 敵が全滅したらゲームクリア画面へ遷移
+	if (m_enemyMgr->IsAllDead()) {
+		NewGO<GameClear>(0, "gameClear");  // ← GameClear シーンを作る想定
+		DeleteGO(this);                   // 今のゲームシーンを削除
+		return;
+	}
 
 }
 
