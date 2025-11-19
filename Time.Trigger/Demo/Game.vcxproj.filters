@@ -23,6 +23,7 @@
     <ClCompile Include="GameOver.cpp" />
     <ClCompile Include="UIManager.cpp" />
     <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="Title.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -41,5 +42,6 @@
     <ClInclude Include="GameOver.h" />
     <ClInclude Include="UIManager.h" />
     <ClInclude Include="Weapon.h" />
+    <ClInclude Include="Title.h" />
   </ItemGroup>
 </Project>

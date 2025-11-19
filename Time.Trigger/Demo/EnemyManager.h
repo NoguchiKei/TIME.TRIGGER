@@ -16,6 +16,8 @@ class EnemyManager : public IGameObject
 
 	void CheckCollision();
 
+	bool IsAllDead() const { return enemies.empty(); }
+
 private:
 	std::vector<Enemy*> enemies;  // “G‚ğ•¡”ŠÇ—‚·‚é
 
