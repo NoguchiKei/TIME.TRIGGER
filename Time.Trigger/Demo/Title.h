@@ -1,10 +1,10 @@
 #pragma once
 
-class GameClear : public IGameObject
+class Title : public IGameObject
 {
 public:
-	GameClear();
-	~GameClear();
+	Title();
+	~Title();
 	bool Start() override;
 	void Update() override;
 	void Render(RenderContext& rc) override;
